@@ -1,0 +1,54 @@
+.container {
+  
+  button {
+    color: white;
+    background: #61370c;
+    border: 1px solid #4e2a05;
+    border-radius: 2px;
+    width: 70px;
+    height: 50px;
+    position: fixed;
+    left: 15%;
+    top: 10%;
+  }
+
+  .piece-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    margin-top: 10%;
+
+    .piece-image {
+      img {
+        width: 500px;
+        height: 500px;
+        border-radius: 10px 0px 0px 10px;
+        border: 1px solid #ececec;
+        padding: 5px;
+      }
+    }
+
+    .piece-info-container {
+      color: #3a3a3a;
+      max-width: 40%;
+      text-align: left;
+      border-radius: 0px 10px 10px 0px;
+      background: #ececec;
+      padding: 20px;
+      margin-left: 20px;
+
+      h3 {
+        border-bottom: 0.5px solid #61370c;
+        font-size: 34px;
+        width: 40%;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

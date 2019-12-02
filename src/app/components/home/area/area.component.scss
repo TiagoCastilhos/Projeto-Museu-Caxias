@@ -1,0 +1,14 @@
+.area {
+    color: #FFF;
+    width: 220px;
+    height: 200px;
+    background: #A97440;
+    border-radius: 5px;
+    box-shadow: -3px 2px 4px 1px #5f3d1d;
+    cursor: pointer;
+
+    .area-name {
+        padding-top: 1em;
+        font-size: 20px;
+    }
+}

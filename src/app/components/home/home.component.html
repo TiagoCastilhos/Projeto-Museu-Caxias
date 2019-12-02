@@ -1,0 +1,17 @@
+<div class="home-container">
+    <h3>
+        Sobre o Museu Municipal de Caxias do Sul
+    </h3>
+    <p id="divider"></p>
+    <p>
+        O Museu Municipal conta a história da cidade, focando principalmente na imigração italiana e na forma como a
+        vida
+        era na época: como as pessoas trabalhavam, quais instrumentos utilizavam, onde vivam, como eram suas casas, o
+        que faziam no tempo livre. Existe também um espaço sobre a população indígena que vivia na região antes dos
+        imigrantes chegarem, uma sala dedicada à arte sacra e um cômodo direcionado às exposições itinerantes.
+    </p>
+
+    <div class="areas-container" *ngIf="areas">
+        <area *ngFor="let area of areas" [area]="area" />
+    </div>
+</div>

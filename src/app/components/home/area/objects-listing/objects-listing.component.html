@@ -1,0 +1,15 @@
+<div class="container">
+    <button [routerLink]="['']">
+        <i class="material-icons-round">arrow_back</i>
+    </button>
+    <div class="listing-container">
+        <h3>{{area.name}}</h3>
+        <div class="pieces-container">
+            <div class="piece" *ngFor="let piece of area.pieces" id="pieces">
+                <img [src]="_DomSanitization.bypassSecurityTrustUrl(piece.thumbnail)"
+                    [routerLink]="['/areas', area.id, 'pieces', piece.id]">
+                <p>{{piece.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

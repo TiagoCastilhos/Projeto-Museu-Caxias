@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+h3 {
+    font-family: 'Ovo', serif;
+}
+
+p {
+    font-family: 'Red Hat Display', sans-serif;
+
+}
+
+body {
+    background-image: 
+    // #1E1E1E,
+    // #504439;
+        linear-gradient(to bottom, #231300, #231300a3, #2313009c, #12121294, #000000c9, #121212),
+        url("./assets/Museu_Home.JPG");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

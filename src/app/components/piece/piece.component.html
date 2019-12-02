@@ -1,0 +1,21 @@
+<div class="container">
+    <button [routerLink]="['/areas', piece.areaId]">
+        <i class="material-icons-round">arrow_back</i>
+    </button>
+    <div class="piece-container">
+        <div class="piece-image" *ngIf="piece.thumbnail">
+            <img [src]="_DomSanitization.bypassSecurityTrustUrl(piece.thumbnail)">
+        </div>
+        <div class="piece-info-container">
+            <h3>{{piece.name}}</h3>
+            <div class="piece-info">
+                <p><b>Descrição: </b>{{piece.description}}</p>
+                <p *ngIf="piece.period"><b>Época: </b>{{piece.period}}</p>
+                <p *ngIf="piece.origin"><b>Procedência: </b>{{piece.origin}}</p>
+                <p *ngIf="piece.owner"><b>Proprietário: </b>{{piece.owner}}</p>
+                <p *ngIf="piece.acquirement"><b>Aquisição: </b>{{piece.acquirement}}</p>
+                <p><b>Nº de Ordem: </b>{{piece.order}}</p>
+            </div>
+        </div>
+    </div>
+</div>
