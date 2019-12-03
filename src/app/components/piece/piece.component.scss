@@ -1,17 +1,4 @@
 .container {
-  
-  button {
-    color: white;
-    background: #61370c;
-    border: 1px solid #4e2a05;
-    border-radius: 2px;
-    width: 70px;
-    height: 50px;
-    position: fixed;
-    left: 15%;
-    top: 10%;
-  }
-
   .piece-container {
     display: flex;
     flex: 1;
@@ -21,6 +8,10 @@
     align-content: space-evenly;
     margin-top: 10%;
 
+    .piece-container:hover {
+      border-radius: 3px;
+      box-shadow: gray;
+    }
     .piece-image {
       img {
         width: 500px;
@@ -28,6 +19,10 @@
         border-radius: 10px 0px 0px 10px;
         border: 1px solid #ececec;
         padding: 5px;
+      }
+
+      img:hover {
+        box-shadow: -2px 2px 3px 1px #2d2d2d;
       }
     }
 

@@ -1,8 +1,7 @@
 <div class="container">
-    <button [routerLink]="['/areas', piece.areaId]">
-        <i class="material-icons-round">arrow_back</i>
-    </button>
-    <div class="piece-container">
+    <back-button (click)="goBack()"></back-button>
+    <progress-spinner *ngIf="loading"></progress-spinner>
+    <div class="piece-container" *ngIf="!loading">
         <div class="piece-image" *ngIf="piece.thumbnail">
             <img [src]="_DomSanitization.bypassSecurityTrustUrl(piece.thumbnail)">
         </div>

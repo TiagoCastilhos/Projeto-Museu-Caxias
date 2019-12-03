@@ -1,0 +1,4 @@
+<div class="search-bar-container">
+    <input [(ngModel)]="searchText" placeholder="Busca" (keyup.enter)="performQuery()">
+    <i class="material-icons-round" (click)="performQuery()">search</i>
+</div>

@@ -1,4 +1,5 @@
 <div class="home-container">
+    <search-bar></search-bar>
     <h3>
         Sobre o Museu Municipal de Caxias do Sul
     </h3>
@@ -12,6 +13,6 @@
     </p>
 
     <div class="areas-container" *ngIf="areas">
-        <area *ngFor="let area of areas" [area]="area" />
+        <museum-area *ngFor="let area of areas" [area]="area"></museum-area>
     </div>
 </div>

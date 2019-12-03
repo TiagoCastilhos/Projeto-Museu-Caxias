@@ -16,7 +16,10 @@ app.on('activate', () => {
 
 ipcMain.on('select-query', (event: IpcMainEvent, args: any[]) => {
     const conn = new DbConnection().getConnection();
-    conn.connect((error) => console.log(error));
+    conn.connect((error) => { 
+        if (error)
+            console.log(error)
+    });
 
     conn.query(args[0], (error, rows, field) => {
         if (error)
@@ -39,7 +42,7 @@ function createWindow() {
 
     win.loadURL(
         url.format({
-            pathname: path.join(__dirname, `/../../dist/angular-electron/index.html`),
+            pathname: path.join(__dirname, `/../../dist/museu-caxias/index.html`),
             protocol: 'file:',
             slashes: true,
         })

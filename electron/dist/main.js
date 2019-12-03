@@ -14,7 +14,10 @@ electron_1.app.on('activate', () => {
 });
 electron_2.ipcMain.on('select-query', (event, args) => {
     const conn = new dbConnection_1.default().getConnection();
-    conn.connect((error) => console.log(error));
+    conn.connect((error) => {
+        if (error)
+            console.log(error);
+    });
     conn.query(args[0], (error, rows, field) => {
         if (error)
             console.log(error);
@@ -25,18 +28,19 @@ electron_2.ipcMain.on('select-query', (event, args) => {
 });
 function createWindow() {
     win = new electron_1.BrowserWindow({
-        fullscreen: true,
+        autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true,
             webSecurity: false
         }
     });
     win.loadURL(url.format({
-        pathname: path.join(__dirname, `/../../dist/angular-electron/index.html`),
+        pathname: path.join(__dirname, `/../../dist/museu-caxias/index.html`),
         protocol: 'file:',
         slashes: true,
     }));
-    win.webContents.openDevTools();
+    win.maximize();
+    //win.webContents.openDevTools()
     win.on('closed', () => {
         win = null;
     });
