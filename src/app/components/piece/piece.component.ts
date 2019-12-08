@@ -4,6 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import Piece from 'src/app/models/piece.model';
 import { IpcService } from 'src/app/services/ipc.service';
 import { Location } from '@angular/common';
+import * as moment from 'moment';
 
 @Component({
   selector: 'piece',
@@ -51,5 +52,9 @@ export class PieceComponent implements OnInit {
 
   goBack() {
     this.location.back();
+  }
+
+  getFriendlyAcquirementDate() : string {
+    return moment(this.piece.acquirement).locale("pt").format('LL');
   }
 }

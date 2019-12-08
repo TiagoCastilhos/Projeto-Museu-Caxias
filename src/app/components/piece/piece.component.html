@@ -12,7 +12,7 @@
                 <p *ngIf="piece.period"><b>Época: </b>{{piece.period}}</p>
                 <p *ngIf="piece.origin"><b>Procedência: </b>{{piece.origin}}</p>
                 <p *ngIf="piece.owner"><b>Proprietário: </b>{{piece.owner}}</p>
-                <p *ngIf="piece.acquirement"><b>Aquisição: </b>{{piece.acquirement}}</p>
+                <p *ngIf="piece.acquirement"><b>Aquisição: </b>{{getFriendlyAcquirementDate()}}</p>
                 <p><b>Nº de Ordem: </b>{{piece.order}}</p>
             </div>
         </div>
