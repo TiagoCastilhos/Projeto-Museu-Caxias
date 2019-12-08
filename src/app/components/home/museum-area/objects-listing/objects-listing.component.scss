@@ -17,7 +17,7 @@
   .listing-container {
     text-align: center;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     
     h3 {
       text-align: center;
@@ -27,13 +27,13 @@
     }
   
     .pieces-container {
-      width: 60%;
+      width: 80%;
       display: flex;
       flex: 1;
       flex-direction: row;
       flex-flow: row wrap;
       justify-content: space-evenly;
-      margin-left: 20%;
+      margin-left: 10%;
       max-height: 575px;
       overflow-y: auto;
   

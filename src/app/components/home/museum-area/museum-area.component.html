@@ -1,3 +1,4 @@
 <div class="area" [routerLink]="['/areas', area.id]" *ngIf="area">
     <p class="area-name">{{area.name}}</p>
+    <img [src]="_DomSanitization.bypassSecurityTrustUrl(area.icon)" class="area-icon">
 </div>

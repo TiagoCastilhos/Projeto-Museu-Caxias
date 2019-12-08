@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.ipcService.on('query-result', (event, rows: Area[]) => {
-      this.nz.run(() => rows.forEach(r => this.areas.push({ id: r.id, name: r.name, pieces: r.pieces })))
+      this.nz.run(() => rows.forEach(r => this.areas.push({ id: r.id, name: r.name, pieces: r.pieces, icon: r.icon })))
     });
 
     this.ipcService.send('select-query', ['select * from areas']);
